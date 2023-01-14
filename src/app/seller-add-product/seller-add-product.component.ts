@@ -11,5 +11,8 @@ export class SellerAddProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  submitProduct(data : object) {
+    console.warn(data);
+  }
 
 }
