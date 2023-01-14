@@ -28,42 +28,6 @@
       "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._SX522_.jpg",
       "description": "latest phone",
       "id": 1
-    },
-    {
-      "name": "Iphone 14",
-      "price": "100000",
-      "color": "gray",
-      "category": "mobiles",
-      "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._SX522_.jpg",
-      "description": "latest phone",
-      "id": 2
-    },
-    {
-      "name": "Iphone 14",
-      "price": "100000",
-      "color": "gray",
-      "category": "mobiles",
-      "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._SX522_.jpg",
-      "description": "latest phone",
-      "id": 3
-    },
-    {
-      "name": "Iphone 14",
-      "price": "100000",
-      "color": "gray",
-      "category": "mobiles",
-      "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._SX522_.jpg",
-      "description": "This is the best phone",
-      "id": 4
-    },
-    {
-      "name": "Iphone 14",
-      "price": "100000",
-      "color": "gray",
-      "category": "mobiles",
-      "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._SX522_.jpg",
-      "description": "This is the best phone",
-      "id": 5
     }
   ]
 }

@@ -14,4 +14,8 @@ export class ProductService {
   productList() {
     return this.http.get<product[]>('http://localhost:3000/products/');
   }
+  deleteProduct( idx : number) {
+    console.warn(idx);
+    return this.http.delete('http://localhost:3000/products/'+ idx);
+  }
 }

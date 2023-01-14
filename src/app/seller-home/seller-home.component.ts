@@ -9,13 +9,30 @@ import { ProductService } from '../services/product.service';
 })
 export class SellerHomeComponent implements OnInit {
   productList : undefined| product[];
+  productDeleteMessage : undefined | string;
   constructor(private product: ProductService) { }
 
   ngOnInit(): void {
-    this.product.productList().subscribe((result)=>{
-      console.warn(result);
+    this.listAllProducts();
+  }
+  deleteProduct(id : number) {
+    this.product.deleteProduct(id).subscribe((result)=>{
+      if (result) {
+        this.productDeleteMessage = "Product successfully deleted";
+        this.listAllProducts();
+      }
+    });
+
+    setTimeout(()=>{
+      this.productDeleteMessage = undefined;
+    }, 3000);
+  }
+
+  listAllProducts() {
+    this.product.productList().subscribe((result) => {
+      // console.warn(result);
       this.productList = result;
-    })
+    });
   }
 
 }
