@@ -1,29 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { product } from '../datatype';
 import { ProductService } from '../services/product.service';
-
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
-  styleUrls: ['./seller-home.component.css']
+  styleUrls: ['./seller-home.component.css'],
 })
 export class SellerHomeComponent implements OnInit {
-  productList : undefined| product[];
-  productDeleteMessage : undefined | string;
-  constructor(private product: ProductService) { }
+  productList: undefined | product[];
+  productDeleteMessage: undefined | string;
+  icon = faTrash;
+  constructor(private product: ProductService) {}
 
   ngOnInit(): void {
     this.listAllProducts();
   }
-  deleteProduct(id : number) {
-    this.product.deleteProduct(id).subscribe((result)=>{
+  deleteProduct(id: number) {
+    this.product.deleteProduct(id).subscribe((result) => {
       if (result) {
-        this.productDeleteMessage = "Product successfully deleted";
+        this.productDeleteMessage = 'Product successfully deleted';
         this.listAllProducts();
       }
     });
 
-    setTimeout(()=>{
+    setTimeout(() => {
       this.productDeleteMessage = undefined;
     }, 3000);
   }
@@ -34,5 +35,4 @@ export class SellerHomeComponent implements OnInit {
       this.productList = result;
     });
   }
-
 }
