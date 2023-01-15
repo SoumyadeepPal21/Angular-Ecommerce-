@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
     this.route.events.subscribe((result : any) => {
       if (result.url) {
         if (localStorage.getItem('seller') && result.url.includes('seller')) {
-          console.warn("in seller");
+          // console.warn("in seller");
           this.menuType = "seller";
           if (localStorage.getItem('seller')) {
             let selllerStore = localStorage.getItem('seller');
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
             this.sellerName = sellerData.name;
           }
         } else {
-          console.warn("outside seller");
+          // console.warn("outside seller");
           this.menuType = "default";
         }
       }
