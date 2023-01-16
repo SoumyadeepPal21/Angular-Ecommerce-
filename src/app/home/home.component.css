@@ -1,0 +1,10 @@
+.product-image{
+    object-fit: contain;
+    height : 600px;
+    width : 1000px;
+}
+
+.carousel-caption-next-icon, .carousel-caption-prev-icon {
+    background-color: black;
+    border-radius: 5px;
+}

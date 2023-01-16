@@ -7,35 +7,40 @@ body {
   margin-right: 5%;
 }
 
-
 .common-form {
-    text-align: center;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
 }
 
-
 .form-input {
-    height: 35px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    border: 1px solid blueviolet;
-    color: blueviolet;
+  height: 35px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border: 1px solid blueviolet;
+  color: blueviolet;
 }
 
 .form-button {
-    height: 35px;
-    border: 1px solid blueviolet;
-    cursor: pointer;
-    text-align: center;
+  height: 35px;
+  border: 1px solid blueviolet;
+  cursor: pointer;
+  text-align: center;
 }
 
-.error-p{
-  color : red;
+.error-p {
+  color: red;
 }
-.succes-message-p{
-  color : green;
-
+.succes-message-p {
+  color: green;
+}
+.carousel-caption {
+  background-color: #00000096;
+  border-radius: 5px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+    border-radius: 5px;
 }
