@@ -1,14 +1,14 @@
 
 .search-item {
     margin: 25px auto;
-    width : 800px;
+    width : 900px;
     border-top: 1px solid #ddd;
     padding: 10px;
 }
 .search-item img {
     width: 100%;
     object-fit: contain;
-    height: 150px;
+    height: 200px;
 }
 .search-item h6 {
     font-size: 23px;
@@ -20,4 +20,9 @@
 }
 .search-item span {
     margin-right: 10px;
+}
+.no-result {
+    color : red;
+    margin-top : 50px;
+    margin-left: 100px;
 }
