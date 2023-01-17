@@ -1,31 +1,61 @@
 <div class="user-auth">
-  <h1>User Sign Up</h1>
-  <form
-    #userSignUp="ngForm"
-    class="common-form"
-    (ngSubmit)="SignUp(userSignUp.value)"
-  >
-    <input
-      type="text"
-      placeholder="Enter User Name"
-      name="name"
-      class="form-input"
-      ngModel
-    />
-    <input
-      type="text"
-      placeholder="Enter User Email"
-      name="email"
-      class="form-input"
-      ngModel
-    />
-    <input
-      type="password"
-      placeholder="Enter password"
-      name="password"
-      class="form-input"
-      ngModel
-    />
-    <button class="form-button">Sign Up</button>
-  </form>
+  <div *ngIf = "!isLoggedIn" class="user-sign-up">
+    <h1>User Sign Up</h1>
+    <form
+      #userSignUp="ngForm"
+      class="common-form"
+      (ngSubmit)="SignUp(userSignUp.value)"
+    >
+      <input
+        type="text"
+        placeholder="Enter User Name"
+        name="name"
+        class="form-input"
+        ngModel
+      />
+      <input
+        type="text"
+        placeholder="Enter User Email"
+        name="email"
+        class="form-input"
+        ngModel
+      />
+      <input
+        type="password"
+        placeholder="Enter password"
+        name="password"
+        class="form-input"
+        ngModel
+      />
+      <button class="form-button">Sign Up</button>
+      <a class = "toggle" (click) = "openLogIn()">Already have an account? Click here to log in</a>
+    </form>
+  </div>
+
+
+  <div *ngIf = "isLoggedIn" class="user-log-up">
+    <h1>User Log In</h1>
+    <form
+      #userSignUp="ngForm"
+      class="common-form"
+      (ngSubmit)="LogIn(userSignUp.value)"
+    >
+      <input
+        type="text"
+        placeholder="Enter User Email"
+        name="email"
+        class="form-input"
+        ngModel
+      />
+      <input
+        type="password"
+        placeholder="Enter password"
+        name="password"
+        class="form-input"
+        ngModel
+      />
+      <button class="form-button">Sign Up</button>
+      <a class = "toggle" (click) = "openSignUp()">Don't have an account? Click here to sign up</a>
+    </form>
+  </div>
 </div>

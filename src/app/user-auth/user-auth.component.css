@@ -4,3 +4,8 @@ h1 {
     margin-bottom: 50px;
     margin-top: 80px;
 }
+.toggle {
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none
+}
