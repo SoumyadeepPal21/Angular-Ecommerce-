@@ -12,11 +12,15 @@ export class UserService {
     this.http
       .post('http://localhost:3000/users', user, { observe: 'response' })
       .subscribe((res) => {
-        console.warn(res);
         if (res) {
           localStorage.setItem('user', JSON.stringify(res.body));
           this.router.navigate(['/']);
         }
       });
+  }
+  userAuthReload() {
+    if (localStorage.getItem('user')) {
+      this.router.navigate(['/']);
+    }
   }
 }

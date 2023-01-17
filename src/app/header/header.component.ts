@@ -1,6 +1,6 @@
 import { VariableBinding } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 import { product } from '../datatype';
 import { ProductService } from '../services/product.service';
 @Component({
@@ -11,6 +11,7 @@ import { ProductService } from '../services/product.service';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
+  userName: string = '';
   searchResults: undefined | product[];
   constructor(private route: Router, private product: ProductService) {}
 
@@ -18,15 +19,17 @@ export class HeaderComponent implements OnInit {
     this.route.events.subscribe((result: any) => {
       if (result.url) {
         if (localStorage.getItem('seller') && result.url.includes('seller')) {
-          // console.warn("in seller");
           this.menuType = 'seller';
-          if (localStorage.getItem('seller')) {
-            let selllerStore = localStorage.getItem('seller');
-            let sellerData = selllerStore && JSON.parse(selllerStore)[0];
-            this.sellerName = sellerData.name;
-          }
+          let selllerStore = localStorage.getItem('seller');
+          let sellerData = selllerStore && JSON.parse(selllerStore)[0];
+          this.sellerName = sellerData.name;
+        } else if (localStorage.getItem('user')) {
+          this.menuType = 'user';
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name;
+          console.warn(this.userName);
         } else {
-          // console.warn("outside seller");
           this.menuType = 'default';
         }
       }
@@ -36,7 +39,10 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
   }
-
+  userLogout() {
+    localStorage.removeItem('user');
+    this.route.navigate(['/user-auth']);
+  }
   searchProducts(query: KeyboardEvent) {
     if (query) {
       const item = query.target as HTMLInputElement;
@@ -57,7 +63,7 @@ export class HeaderComponent implements OnInit {
     console.warn(val);
     this.route.navigate(['search/' + val]);
   }
-  redirectToDetail(id : number) {
+  redirectToDetail(id: number) {
     this.route.navigate(['/details/' + id]);
   }
 }
