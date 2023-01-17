@@ -62,5 +62,19 @@
       "description": "Best Headphone",
       "id": 5
     }
+  ],
+  "users": [
+    {
+      "name": "sads",
+      "email": "spal06030@gmail.com",
+      "password": "f3Fa5ADvN8m",
+      "id": 1
+    },
+    {
+      "name": "sads",
+      "email": "spal06030@gmail.com",
+      "password": "f3Fa5ADvN8m",
+      "id": 2
+    }
   ]
 }
