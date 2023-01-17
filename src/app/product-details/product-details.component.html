@@ -17,9 +17,9 @@
     <button class="form-button">Buy Now</button>
     <br>
     <div class="quantity-group">
-        <button>+</button>
-        <input type = "text" value = "1" />
-        <button>-</button>
+        <button (click) = "adjustQuantity('+')">+</button>
+        <input type = "text" value = "{{productQuantity}}" />
+        <button (click) = "adjustQuantity('-')">-</button>
     </div>
   </div>
 </div>
