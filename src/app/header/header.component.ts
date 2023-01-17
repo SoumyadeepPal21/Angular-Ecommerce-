@@ -40,17 +40,21 @@ export class HeaderComponent implements OnInit {
   searchProducts(query: KeyboardEvent) {
     if (query) {
       const item = query.target as HTMLInputElement;
-      console.warn(item.value);
+      // console.warn(item.value);
       this.product.serachProducts(item.value).subscribe((data) => {
         if (data.length > 5) {
           data.length = 5;
         }
         this.searchResults = data;
-        console.warn(data);
+        // console.warn(data);
       });
     }
   }
   hideSearch() {
     this.searchResults = undefined;
+  }
+  submitSearch(val : string) {
+    console.warn(val);
+    this.route.navigate(['search/' + val]);
   }
 }
