@@ -29,7 +29,6 @@ export class ProductService {
     return this.http.get<product[]>('http://localhost:3000/products?_limit=4');
   }
   serachProducts(query : string) {
-    // console.warn(query);
     return this.http.get<product[]>('http://localhost:3000/products?q=' + query);
   }
 }

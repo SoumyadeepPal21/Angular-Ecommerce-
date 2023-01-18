@@ -1,5 +1,5 @@
 <div class="user-auth">
-  <div *ngIf = "!isLoggedIn" class="user-sign-up">
+  <div *ngIf="!isLoggedIn" class="user-sign-up">
     <h1>User Sign Up</h1>
     <form
       #userSignUp="ngForm"
@@ -28,34 +28,55 @@
         ngModel
       />
       <button class="form-button">Sign Up</button>
-      <a class = "toggle" (click) = "openLogIn()">Already have an account? Click here to log in</a>
+      <a class="toggle" (click)="openLogIn()"
+        >Already have an account? Click here to log in</a
+      >
     </form>
   </div>
 
-
-  <div *ngIf = "isLoggedIn" class="user-log-up">
+  <div *ngIf="isLoggedIn" class="user-log-up">
     <h1>User Log In</h1>
     <form
-      #userSignUp="ngForm"
+      #userLogIn="ngForm"
       class="common-form"
-      (ngSubmit)="LogIn(userSignUp.value)"
+      (ngSubmit)="LogIn(userLogIn.value)"
     >
+    <p class="error-p">{{authError}}</p>
       <input
         type="text"
         placeholder="Enter User Email"
         name="email"
         class="form-input"
         ngModel
+        #email="ngModel"
+        required
+        email
       />
+      <p class="invalid-input">
+        <span *ngIf="email.invalid && email.touched"
+          >Please enter a valid email.id</span
+        >
+      </p>
       <input
         type="password"
         placeholder="Enter password"
         name="password"
         class="form-input"
         ngModel
+        #password="ngModel"
+        required
+        minlength="5"
+        maxlength="20"
       />
-      <button class="form-button">Sign Up</button>
-      <a class = "toggle" (click) = "openSignUp()">Don't have an account? Click here to sign up</a>
+      <p class="invalid-input">
+        <span *ngIf="password.invalid && password.touched"
+          >Please enter a proper password</span
+        >
+      </p>
+      <button [disabled]="userLogIn.invalid" class="form-button">Log In</button>
+      <a class="toggle" (click)="openSignUp()"
+        >Don't have an account? Click here to sign up</a
+      >
     </form>
   </div>
 </div>
