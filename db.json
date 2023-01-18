@@ -130,5 +130,19 @@
       "password": "f3Fa5ADvN8m",
       "id": 11
     }
+  ],
+  "cart": [
+    {
+      "name": "Samsung S22",
+      "price": "30000",
+      "color": "Blue",
+      "category": "mobile",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM6Oy3fLF-EY0013SFdVQUKg2jeHYGexjuHl6C9bzXqA&s",
+      "description": "Best Samsung phone",
+      "id": 2,
+      "quantity": 1,
+      "userId": 1,
+      "productId": 2
+    }
   ]
 }
