@@ -15,5 +15,6 @@ export interface product {
   image : string;
   color : string;
   id : number;
+  quantity : number;
 }
 
