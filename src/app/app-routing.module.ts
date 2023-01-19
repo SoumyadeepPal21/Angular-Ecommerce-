@@ -4,6 +4,7 @@ import { AuthGuard } from './auth.guard';
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { HomeComponent } from './home/home.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
@@ -55,7 +56,11 @@ const routes: Routes = [
   {
     component: CheckoutComponent,
     path: 'checkout',
-  }
+  },
+  {
+    component: MyOrdersComponent,
+    path: 'my-orders',
+  },
 ];
 
 @NgModule({
