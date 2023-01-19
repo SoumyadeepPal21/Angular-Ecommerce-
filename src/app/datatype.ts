@@ -31,3 +31,11 @@ export interface cart {
   userId : number;
   productId : number;
 }
+
+export interface priceSummary {
+  price : number;
+  discount : number;
+  delivery : number;
+  total : number;
+  tax : number;
+}

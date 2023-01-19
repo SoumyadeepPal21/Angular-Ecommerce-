@@ -101,18 +101,6 @@
       "userId": 1,
       "productId": 4,
       "id": 12
-    },
-    {
-      "name": "Iphone 14",
-      "price": "100000",
-      "color": "gray",
-      "category": "mobile",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLB_Y_ZfFRzafvpC7jeoTlqQFDevMxNWzgtA&usqp=CAU",
-      "description": "Best phone in the price range",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 3,
-      "id": 13
     }
   ]
 }
