@@ -12,6 +12,7 @@ export class ProductDetailsComponent implements OnInit {
   productData: undefined | product;
   productQuantity: number = 1;
   removeCart = false;
+  cartData : undefined | product;
   constructor(
     private activateRoute: ActivatedRoute,
     private product: ProductService
@@ -37,14 +38,18 @@ export class ProductDetailsComponent implements OnInit {
     if (user) {
       let userId = user && JSON.parse(user).id;
       this.product.getCartList(userId);
-      this.product.cartData.subscribe((res)=>{
-        let items = res.filter((item : product)=>productId?.toString() === item.productId?.toString());
-        console.warn("items " + items.length);
-        
+      this.product.cartData.subscribe((res) => {
+        let items = res.filter(
+          (item: product) =>
+            productId?.toString() === item.productId?.toString()
+        );
+        console.warn('items ' + items.length);
+
         if (items.length) {
+          this.cartData = items[0];
           this.removeCart = true;
         }
-      })
+      });
     }
   }
   adjustQuantity(val: string) {
@@ -87,7 +92,19 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
   removeFromCart(productId: number) {
-    this.product.removeFromCart(productId);
+    if (!localStorage.getItem('user')) {
+      this.product.removeFromCart(productId);
+    } else {
+      console.warn(this.cartData);
+      this.cartData && this.product.removeFormCart(this.cartData.id)
+      .subscribe((res)=>{
+        if (res) {
+          let user = localStorage.getItem('user');
+          let userId = user && JSON.parse(user).id;
+          this.product.getCartList(userId);
+        }
+      });
+    }
     this.removeCart = false;
   }
 }

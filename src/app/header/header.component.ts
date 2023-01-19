@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
-          console.warn(this.userName);
+          this.product.getCartList(userData.id);
         } else {
           this.menuType = 'default';
         }

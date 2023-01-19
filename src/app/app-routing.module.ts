@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { CartDetailComponent } from './cart-detail/cart-detail.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
@@ -36,16 +37,20 @@ const routes: Routes = [
   },
   {
     component: SearchComponent,
-    path: 'search/:query'
-  }, 
+    path: 'search/:query',
+  },
   {
     component: ProductDetailsComponent,
     path: 'details/:productId',
   },
   {
     component: UserAuthComponent,
-    path : 'user-auth',
-  }
+    path: 'user-auth',
+  },
+  {
+    component: CartDetailComponent,
+    path: 'cart-detail',
+  },
 ];
 
 @NgModule({
