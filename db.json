@@ -102,5 +102,23 @@
       "productId": 4,
       "id": 12
     }
+  ],
+  "orders": [
+    {
+      "email": "ddsf",
+      "address": "dsfs",
+      "contact": "afdsa",
+      "totalPrice": 5800,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "email": "ddsf",
+      "address": "dsfs",
+      "contact": "afdsa",
+      "totalPrice": 5800,
+      "userId": 1,
+      "id": 2
+    }
   ]
 }

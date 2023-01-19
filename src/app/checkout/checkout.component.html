@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-sm-7 shippingform">
       <h3>Add Shipping Address</h3>
-      <form #orderData="ngForm" class="common-form">
+      <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
         <input
           type="text"
           placeholder="Enter your mail"
@@ -29,7 +29,7 @@
       </form>
     </div>
     <div class="col-sm-5">
-        <h3>Total Ammount</h3>
+        <h3>Total Ammount : {{totalPrice}}</h3>
         <h4>Payment Method : <b>Cash on delivery</b></h4>
     </div>
   </div>
