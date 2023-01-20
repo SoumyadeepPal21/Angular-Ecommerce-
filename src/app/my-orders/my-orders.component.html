@@ -17,32 +17,15 @@
             <span>Action</span>
         </div>
     </div>
-    <div class="row order-data">
+    <div class="row order-data" *ngFor="let order of orderData">
         <div class="col-sm-2">
-            <img class ="order-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM6Oy3fLF-EY0013SFdVQUKg2jeHYGexjuHl6C9bzXqA&s">
+            <img class ="order-img" src="">
         </div>
         <div class="col-sm-2">
-            <span>#100</span>
+            <span>#{{order.id}}</span>
         </div>
         <div class="col-sm-2">
-            <span>10000</span>
-        </div>
-        <div class="col-sm-2">
-            <span>In Process</span>
-        </div>
-        <div class="col-sm-2">
-            <span><button class = "form-button">Cancel Order</button></span>
-        </div>
-    </div>
-    <div class="row order-data">
-        <div class="col-sm-2">
-            <img class ="order-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM6Oy3fLF-EY0013SFdVQUKg2jeHYGexjuHl6C9bzXqA&s">
-        </div>
-        <div class="col-sm-2">
-            <span>#100</span>
-        </div>
-        <div class="col-sm-2">
-            <span>10000</span>
+            <span>{{order.totalPrice}}</span>
         </div>
         <div class="col-sm-2">
             <span>In Process</span>

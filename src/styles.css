@@ -36,6 +36,7 @@ body {
 }
 .succes-message-p {
   color: green;
+  text-align: center;
 }
 .carousel-caption {
   background-color: #00000096;
