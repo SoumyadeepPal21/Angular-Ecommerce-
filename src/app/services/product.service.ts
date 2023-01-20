@@ -107,4 +107,7 @@ export class ProductService {
         }
       });
   }
+  deleteOrder(orderId : number) {
+    return this.http.delete('http://localhost:3000/orders/' + orderId);
+  }
 }

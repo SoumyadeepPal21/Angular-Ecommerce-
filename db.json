@@ -80,14 +80,6 @@
   "cart": [],
   "orders": [
     {
-      "email": "dscf",
-      "address": "dvadsf",
-      "contact": "dfasdf",
-      "totalPrice": 5800,
-      "userId": 1,
-      "id": 1
-    },
-    {
       "email": "sfdsa",
       "address": "adfasd",
       "contact": "adsfa",
