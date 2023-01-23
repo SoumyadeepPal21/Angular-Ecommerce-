@@ -20,7 +20,9 @@ import { FooterComponent } from './footer/footer.component';
 import { CartDetailComponent } from './cart-detail/cart-detail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import {  } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     FooterComponent,
     CartDetailComponent,
     CheckoutComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,9 +46,11 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -78,22 +78,5 @@
     }
   ],
   "cart": [],
-  "orders": [
-    {
-      "email": "sfdsa",
-      "address": "adfasd",
-      "contact": "adsfa",
-      "totalPrice": 5800,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "email": "soumyadeepbappipal@gmail.com",
-      "address": "34, Saratpally, bowbazar, jalpaiguri",
-      "contact": "07699055016",
-      "totalPrice": 28600,
-      "userId": 1,
-      "id": 3
-    }
-  ]
+  "orders": []
 }

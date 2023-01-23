@@ -11,11 +11,11 @@
     </div>
     <div>
       <h6>Category : {{ productData.category }}</h6>
-      <h6>Category : {{ productData.description }}</h6>
+      <h6>Description : {{ productData.description }}</h6>
     </div>
     <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">Add to Cart</button>
     <button *ngIf="removeCart" class="form-button" (click)="removeFromCart(productData.id)">Remove from Cart</button>
-    <button class="form-button">Buy Now</button>
+    <!-- <button class="form-button">Buy Now</button> -->
     <br>
     <div class="quantity-group">
         <button (click) = "adjustQuantity('+')">+</button>
